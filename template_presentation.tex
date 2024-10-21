@@ -159,9 +159,26 @@
 	\end{frame}
 \endgroup
 
+% ----------------------------------------------------
+% 	Table of contents
+% ----------------------------------------------------
+
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents
+\end{frame}
+
+
 %----------------------------------------------------------------------------------------
 %	PRESENTATION BODY SLIDE EXAMPLES
 %----------------------------------------------------------------------------------------
+
+\section{First section}
+
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}
 	\frametitle{Slide Title}
@@ -200,6 +217,18 @@
 
 %------------------------------------------------
 
+\section{Another section}
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents[currentsection]
+\end{frame}
+
+\subsection{A subsection}
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents[currentsubsection]
+\end{frame}
+
 \begin{frame}
 	\frametitle{Slide Title with No Subtitle}
 	
@@ -233,6 +262,8 @@
 \end{frame}
 
 %------------------------------------------------
+
+\subsection{Examples}
 
 \begin{frame}
 	\frametitle{Slide Title}
@@ -499,6 +530,38 @@
 \end{frame}
 
 %------------------------------------------------
+
+% ------------------------------------------------
+% 	Math slides
+% -----------------------------------------------
+
+\section{Math section}
+
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Main theoretical results}
+	\framesubtitle{Just a couple of theorems}
+	
+	\begin{theorem}[Just a theorem]
+		For integers $n>2$, the equation
+		\[ a^n + b^n = c^n \]
+		cannot be solved for integers $a$, $b$ and $c$.
+	\end{theorem}
+
+	\begin{theorem}[Approximation theorem for sigmoid activation functions]
+		\label{teo:AU}
+		Let $\sigma$ be a continuous sigmoid function. Then the set of functions of the form
+		$$ G(x) = \displaystyle \sum^N_{j=1}a_j\sigma(w^T_jx+b_j)$$
+		is dense in $\mathcal{C}([0,1]^n)$, with $\b_j \in \mathbb{R}$, $a_j\in \mathbb{R} \hspace{.25cm}\, \forall j=1,\dots,N$ y $w_j \in \mathbb{R}^n \hspace{.25cm}\, \forall j=1,\dots,N$.
+		In other words, for all $f\in\mathcal{C}([0,1]^n)$ y $\epsilon>0$, there is a $G(x)$ with the previous form such that
+		$$ |G(x)-f(x)|<\epsilon \hspace{.25cm}\, \forall x\in [0,1]^n\,.$$
+	\end{theorem}
+
+\end{frame}
 
 
 %----------------------------------------------------------------------------------------
