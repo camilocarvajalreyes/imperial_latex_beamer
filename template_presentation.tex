@@ -1,11 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Imperial College London Presentation
 % LaTeX Template
-% Version 1.0 (April 16, 2024)
 %
 % This template was created by:
 % Vel (enquiries@latextypesetting.com)
 % LaTeXTypesetting.com
+%
+% modified version by camilocarvajalreyes
 %
 %!TEX program = xelatex
 % Note: this template must be compiled with XeLaTeX rather than PDFLaTeX
@@ -57,6 +58,8 @@
 
 \date{DD/MM/YYYY} % Presentation date to appear on the title slide and right footers
 
+\newcommand{\titlepageImage}{Images/Imperial_campus-snow.jpg}
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -95,46 +98,6 @@
 \endgroup
 
 %------------------------------------------------
-
-% Cream background title slide example
-
-\begingroup
-	\setbeamercolor{background canvas}{bg=ICLCream} % Slide background color
-	\setbeamercolor{title page title}{fg=ICLBlue} % Title text color
-	\setbeamercolor{title page subtitle}{fg=ICLBlue} % Subtitle text color
-	\setbeamercolor{author}{fg=ICLBlue} % Author(s) text color
-	\setbeamercolor{date}{fg=ICLBlue} % Date text color
-	\setbeamertemplate{title page}[logo]{ICL_Logo_Blue.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
-	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
-\endgroup
-
-%------------------------------------------------
-
-% Light grey background title slide example
-
-\begingroup
-	\setbeamercolor{background canvas}{bg=ICLLightGrey} % Slide background color
-	\setbeamercolor{title page title}{fg=ICLBlue} % Title text color
-	\setbeamercolor{title page subtitle}{fg=ICLBlue} % Subtitle text color
-	\setbeamercolor{author}{fg=ICLBlue} % Author(s) text color
-	\setbeamercolor{date}{fg=ICLBlue} % Date text color
-	\setbeamertemplate{title page}[logo]{ICL_Logo_Blue.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
-	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
-\endgroup
-
-%------------------------------------------------
-
-% Full page image background title slide example
-
-\begingroup
-	\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{190211_dowker_fay_001.jpg}} % Slide background image
-	\setbeamercolor{title page title}{fg=white} % Title text color
-	\setbeamercolor{title page subtitle}{fg=white} % Subtitle text color
-	\setbeamercolor{author}{fg=white} % Author(s) text color
-	\setbeamercolor{date}{fg=white} % Date text color
-	\setbeamertemplate{title page}[logo]{ICL_Logo_White.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
-	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
-\endgroup
 
 %----------------------------------------------------------------------------------------
 %	AGENDA SLIDES
@@ -537,35 +500,6 @@
 
 %------------------------------------------------
 
-\begingroup
-	\setbeamercolor{background canvas}{bg=ICLBlue} % Slide background color
-	
-	\begin{frame}[plain] % 'plain' suppresses the footer
-		\medskip % Vertical whitespace
-		\centering % Horizontally center the logo
-		\includegraphics[width=0.99\textwidth]{ICL_Logo_White.pdf}
-	\end{frame}
-\endgroup
-
-%------------------------------------------------
-
-\begin{frame}[plain] % 'plain' suppresses the footer
-	\medskip % Vertical whitespace
-	\centering % Horizontally center the logo
-	\includegraphics[width=0.99\textwidth]{ICL_Logo_Blue.pdf}
-\end{frame}
-
-%------------------------------------------------
-
-\begingroup
-	\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{abt_7295054328859831271Mjc0ODA1Ng.jpg}} % Slide background image
-	
-	\begin{frame}[plain] % 'plain' suppresses the footer
-		\medskip % Vertical whitespace
-		\centering % Horizontally center the logo
-		\includegraphics[width=0.99\textwidth]{ICL_Logo_White.pdf}
-	\end{frame}
-\endgroup
 
 %----------------------------------------------------------------------------------------
 %	CLOSING SLIDES
@@ -595,5 +529,32 @@
 \endgroup
 
 %----------------------------------------------------------------------------------------
+
+%---------------- Repeating the first slide, can be removed --------------------------------
+
+% Blue background title slide example
+
+\begingroup
+	\setbeamercolor{background canvas}{bg=ICLBlue} % Slide background color
+	\setbeamercolor{title page title}{fg=white} % Title text color
+	\setbeamercolor{title page subtitle}{fg=white} % Subtitle text color
+	\setbeamercolor{author}{fg=white} % Author(s) text color
+	\setbeamercolor{date}{fg=white} % Date text color
+	\setbeamertemplate{title page}[logo]{ICL_Logo_White.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
+	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
+\endgroup
+
+%------------------------------------------------
+
+% White background title slide example
+
+\begingroup
+	\setbeamercolor{title page title}{fg=ICLBlue} % Title text color
+	\setbeamercolor{title page subtitle}{fg=ICLBlue} % Subtitle text color
+	\setbeamercolor{author}{fg=ICLBlue} % Author(s) text color
+	\setbeamercolor{date}{fg=ICLBlue} % Date text color
+	\setbeamertemplate{title page}[logo]{ICL_Logo_Blue.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
+	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
+\endgroup
 
 \end{document}

@@ -38,14 +38,16 @@
 	}{ % 16:9 aspect ratio
 		\includegraphics[width=5cm]{#1} % Logo
 	}
-	
-	\vfill\vfill\vfill\vfill\vfill\vfill\vfill\vfill % Automatic vertical whitespace
-	
+
+	\includegraphics[width=0.95\paperwidth]{\titlepageImage} % Custom image before title
+
+	\vspace{0.5\baselineskip} % Vertical whitespace before the title
+
 	\begin{beamercolorbox}[wd=\textwidth]{title page title}
 		\usebeamerfont{title}\inserttitle\par % Title
 	\end{beamercolorbox}
 	
-	\vspace{\baselineskip} % Vertical whitespace
+	\vspace{0.5\baselineskip} % Vertical whitespace
 	
 	\begin{beamercolorbox}[wd=\textwidth]{title page subtitle}
 		\usebeamerfont{subtitle}\insertsubtitle\par % Subtitle
