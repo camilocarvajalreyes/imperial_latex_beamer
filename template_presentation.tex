@@ -97,71 +97,24 @@
 	\frame[plain, s]{\titlepage} % Output the title page with no footer ('plain') and vertically distributed text ('s')
 \endgroup
 
-%------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	AGENDA SLIDES
-%----------------------------------------------------------------------------------------
-
-% White agenda slide
-
-\begingroup
-	\setbeamercolor{normal text}{fg=ICLBlue}\usebeamercolor[fg]{normal text} % Slide text color
-	
-	\begin{frame}
-		\begin{columns}[T] % [T] ensures correct vertical alignment
-			\begin{column}{0.48\linewidth} % Left column
-				\HUGE\textbf{Agenda}
-			\end{column}
-			\begin{column}{0.48\linewidth} % Right column
-				\textbf{01}\tabto{0.125\linewidth} Who we are\\ % Use \tabto{<length>} to add a fixed horizontal whitespace
-				\textbf{02}\tabto{0.125\linewidth} What we do\\
-				\textbf{03}\tabto{0.125\linewidth} Our process\\
-				\textbf{04}\tabto{0.125\linewidth} Our services\\
-				\textbf{05}\tabto{0.125\linewidth} Who we do it for\\
-				\textbf{06}\tabto{0.125\linewidth} Lorem ipsum\\
-				\textbf{07}\tabto{0.125\linewidth} Dolor amet\\
-				\textbf{08}\tabto{0.125\linewidth} Oluptibus autud
-				
-				\textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros.}
-			\end{column}
-		\end{columns}
-	\end{frame}
-\endgroup
-
-%------------------------------------------------
-
-% Blue agenda slide
-
-\begingroup
-	\setbeamercolor{background canvas}{bg=ICLBlue} % Slide background color
-	\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text} % Slide text color
-	\setbeamercolor{page number in head/foot}{fg=white} % Footer text color
-	
-	\begin{frame}
-		\begin{columns}[T] % [T] ensures correct vertical alignment
-			\begin{column}{0.48\linewidth} % Left column
-				\HUGE\textbf{Agenda}
-			\end{column}
-			\begin{column}{0.48\linewidth} % Right column
-				\textbf{01}\tabto{0.125\linewidth} Who we are\\ % Use \tabto{<length>} to add a fixed horizontal whitespace
-				\textbf{02}\tabto{0.125\linewidth} What we do\\
-				\textbf{03}\tabto{0.125\linewidth} Our process\\
-				\textbf{04}\tabto{0.125\linewidth} Our services\\
-				\textbf{05}\tabto{0.125\linewidth} Who we do it for\\
-				\textbf{06}\tabto{0.125\linewidth} Lorem ipsum\\
-				\textbf{07}\tabto{0.125\linewidth} Dolor amet\\
-				\textbf{08}\tabto{0.125\linewidth} Oluptibus autud
-				
-				\textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros.}
-			\end{column}
-		\end{columns}
-	\end{frame}
-\endgroup
 
 % ----------------------------------------------------
 % 	Table of contents
 % ----------------------------------------------------
+
+\begingroup
+\setbeamercolor{background canvas}{bg=ICLBlue}
+\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text}
+\setbeamercolor{section in toc}{fg=white!300,bg=white!300}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{page number in head/foot}{fg=white} % Footer text color
+\setbeamerfont{section in toc}{series=\bfseries}
+\setbeamerfont{frametitle}{size={\fontsize{24}{21}}}
+\begin{frame}
+    \frametitle{Table of contents}
+    \tableofcontents
+\end{frame}
+\endgroup
 
 \begin{frame}
     \frametitle{Table of contents}
@@ -556,7 +509,7 @@
 		\label{teo:AU}
 		Let $\sigma$ be a continuous sigmoid function. Then the set of functions of the form
 		$$ G(x) = \displaystyle \sum^N_{j=1}a_j\sigma(w^T_jx+b_j)$$
-		is dense in $\mathcal{C}([0,1]^n)$, with $\b_j \in \mathbb{R}$, $a_j\in \mathbb{R} \hspace{.25cm}\, \forall j=1,\dots,N$ y $w_j \in \mathbb{R}^n \hspace{.25cm}\, \forall j=1,\dots,N$.
+		is dense in $\mathcal{C}([0,1]^n)$, with $b_j \in \mathbb{R}$, $a_j\in \mathbb{R} \hspace{.25cm}\, \forall j=1,\dots,N$ y $w_j \in \mathbb{R}^n \hspace{.25cm}\, \forall j=1,\dots,N$.
 		In other words, for all $f\in\mathcal{C}([0,1]^n)$ y $\epsilon>0$, there is a $G(x)$ with the previous form such that
 		$$ |G(x)-f(x)|<\epsilon \hspace{.25cm}\, \forall x\in [0,1]^n\,.$$
 	\end{theorem}
