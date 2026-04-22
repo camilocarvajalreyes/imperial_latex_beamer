@@ -1,0 +1,40 @@
+% decent math font
+
+\usefonttheme[onlymath]{serif}
+
+% Complement theorem styles
+%\theoremstyle{definition}
+\newtheoremstyle{defbreak}%
+    {}{}%
+    {}{}%
+    {\bfseries}{}% % Note that final punctuation is omitted.
+    {\newline}
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
+\theoremstyle{defbreak}
+
+\newtheoremstyle{propbreak}%
+    {}{}%
+    {}{}%
+    {\bfseries}{}% % Note that final punctuation is omitted.
+    {\newline}{}
+\theoremstyle{propbreak}
+\newtheorem{property}{Property}[section]
+
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+
+\newtheoremstyle{break}%
+    {}{}%
+    {\itshape}{}%
+    {\bfseries}{}% % Note that final punctuation is omitted.
+    {\newline}
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
+
+\theoremstyle{break}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{result}{Result}[section]
+% \newtheorem{algorithm}{Algorithm}[section]
+
+\def\beforeitemize{\leavevmode \vspace{-0.5\baselineskip}}
