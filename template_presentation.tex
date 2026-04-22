@@ -118,24 +118,7 @@
 % 	Table of contents
 % ----------------------------------------------------
 
-\begingroup
-\setbeamercolor{background canvas}{bg=ICLBlue}
-\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text}
-\setbeamercolor{section in toc}{fg=white!300,bg=white!300}
-\setbeamercolor{frametitle}{fg=white}
-\setbeamercolor{page number in head/foot}{fg=white}
-\setbeamerfont{section in toc}{series=\bfseries}
-\setbeamerfont{frametitle}{size={\fontsize{24}{21}}}
-\begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents
-\end{frame}
-\endgroup
-
-\begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents
-\end{frame}
+\TOC
 
 
 %----------------------------------------------------------------------------------------
@@ -143,11 +126,6 @@
 %----------------------------------------------------------------------------------------
 
 \section{First section}
-
-\begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents[currentsection]
-\end{frame}
 
 \begin{frame}
 	\frametitle{Slide Title}
@@ -187,16 +165,8 @@
 %------------------------------------------------
 
 \section{Another section}
-\begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents[currentsection]
-\end{frame}
 
 \subsection{A subsection}
-\begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents[currentsubsection]
-\end{frame}
 
 \begin{frame}
 	\frametitle{Slide Title with No Subtitle}
@@ -509,11 +479,6 @@
 \section{Math section}
 
 \begin{frame}
-    \frametitle{Table of contents}
-    \tableofcontents[currentsection]
-\end{frame}
-
-\begin{frame}
 	\frametitle{Main theoretical results}
 	\framesubtitle{Just a couple of theorems}
 	
@@ -547,26 +512,12 @@
 
 % Blue closing slide
 
-\begingroup
-	\setbeamercolor{background canvas}{bg=ICLBlue} % Slide background color
-	\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text} % Slide text color
-	\setbeamertemplate{closing slide logo}[logo]{ICL_Logo_White.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
-	\setbeamertemplate{closing slide text}[text]{Thank you} % Slide text
-	
-	\usebeamertemplate{closing slide} % Output the closing slide
-\endgroup
-
-%------------------------------------------------
+\titleBluePage{Thank you}
 
 % White closing slide
 
-\begingroup
-	\setbeamercolor{normal text}{fg=ICLBlue}\usebeamercolor[fg]{normal text} % Slide text color
-	\setbeamertemplate{closing slide logo}[logo]{ICL_Logo_Blue.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
-	\setbeamertemplate{closing slide text}[text]{Thank you.\\ Questions?} % Slide text
-	
-	\usebeamertemplate{closing slide} % Output the closing slide
-\endgroup
+\titleWhitePage{Thank you/questions?}
+
 
 %----------------------------------------------------------------------------------------
 

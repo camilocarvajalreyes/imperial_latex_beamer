@@ -1,3 +1,55 @@
+%-------------------------------------------------------------
+%	TABLE OF CONTENTS
+%-------------------------------------------------------------
+
+% Table of contents with reasonable spacing
+% Table of contents
+\newcommand{\TOC}{
+	\begingroup
+	\setbeamercolor{background canvas}{bg=ICLBlue}
+	\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text}
+	\setbeamercolor{section in toc}{fg=white!300,bg=white!300}
+	\setbeamercolor{frametitle}{fg=white}
+	\setbeamercolor{page number in head/foot}{fg=white}
+	\setbeamerfont{section in toc}{series=\bfseries}
+	\setbeamerfont{frametitle}{size={\fontsize{24}{21}}}
+	% adjusting size of table of contents
+	\setbeamerfont{subsection in toc}{size=\small}
+	\setlength{\parskip}{-0.25ex}
+	\begin{frame}
+		\frametitle{Table of contents}
+		\vspace{\baselineskip}
+		\tableofcontents
+	\end{frame}
+	\endgroup
+}
+
+
+%-------------------------------------------------------------
+%	TITLE ONLY PAGES
+%-------------------------------------------------------------
+
+% Blue
+\newcommand{\titleBluePage}[1]{
+	\begingroup
+		\setbeamercolor{background canvas}{bg=ICLBlue} % Slide background color
+		\setbeamercolor{normal text}{fg=white}\usebeamercolor[fg]{normal text} % Slide text color
+		\setbeamertemplate{closing slide logo}[logo]{ICL_Logo_White.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
+		\setbeamertemplate{closing slide text}[text]{#1} % Slide text	
+		\usebeamertemplate{closing slide} % Output the closing slide
+	\endgroup
+}
+
+\newcommand{\titleWhitePage}[1]{
+	\begingroup
+		\setbeamercolor{normal text}{fg=ICLBlue}\usebeamercolor[fg]{normal text} % Slide text color
+		\setbeamertemplate{closing slide logo}[logo]{ICL_Logo_Blue.pdf} % Imperial logo color, use 'ICL_Logo_White.pdf' for white and 'ICL_Logo_Blue.pdf' for blue
+		\setbeamertemplate{closing slide text}[text]{#1} % Slide text
+		
+		\usebeamertemplate{closing slide} % Output the closing slide
+	\endgroup
+}
+
 
 %-------------------------------------------------------------
 %	MATH THINGS
