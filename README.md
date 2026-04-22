@@ -1,41 +1,51 @@
-# Imperial College London LaTeX templates
+# Modified Imperial College London LaTeX templates
 
-These are the official letterhead and research poster templates, and Beamer
-theme for Imperial College London.
+This is a modified version of the [original Imperial College London LaTeX template](https://github.com/ImperialCollegeLondon/imperial_latex_templates). It keeps Imperial font and colours, but allows for easier usage and some beamer-like commands.
 
-## Overleaf
-
-The
-[letterhead](https://www.overleaf.com/latex/templates/imperial-college-london-official-letter-template/vxqhsxfjqdmm)
-and
-[poster](https://www.overleaf.com/latex/templates/imperial-college-london-poster-template/pphqwvtdrbkp)
-templates are available on Overleaf.
-
-## Download
-
-[Click here to download the current
-version](https://github.com/ImperialCollegeLondon/imperial_latex_templates/archive/refs/heads/main.zip),
-or clone the [repository on
-GitHub](https://github.com/ImperialCollegeLondon/imperial_latex_templates).
-
-## Installation
-
-The templates can be used in by simply placing the `.cls` files, and the
-`Fonts` and `Images` folders in the same folder as your `.tex` document.
-However, if you intend to use the templates repeatedly, you may wish to follow
-the [instructions for installing LaTeX
-packages](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
+NB: this version only includes the beamer template.
 
 ## Usage
 
-Make a copy of `template_letter.tex`, `template_poster_portrait.tex`,
-`template_poster_landscape.tex`, or `template_presentation.tex` and follow the
-instructions in the template.
+To compile the file (same as the original template):
+```
+xelatex template_presentation.tex
+```
 
-## Issues
+When compiling with references, also run
+```
+biber template_presentation
+```
+followed by 
+```
+xelatex template_presentation.tex
+```
+once again.
 
-Please report any bugs in the templates [on
-GitHub](https://github.com/ImperialCollegeLondon/imperial_latex_templates/issues).
+
+## What is different from the official template?
+
+### Cover in title page
+
+A cover image is included. This image can be modified in "Presentation information", line 61, by changing the file location.
+
+Title and subtitles use a smaller font as a consequence.
+
+### Table of contents
+
+A table of contents can be included using the command `\TOC`. This includes a table with blue background and better spacing than the original command.
+
+### Title only pages
+
+A slide with a large single piece of text can be included using `\titleBluePage{}` or `\titleWhitePage{}`, where the desired text is included between brackets. This can be useful when introducing new sections.
+
+### References
+
+The template includes an example library.bib file, which can receive citations in bibtex format. Citations are be made via `\cite{}' or '\autocite{}' (citation between round brackets). A reference slide is included at the end.
+
+### Math font
+
+A math-suitable format for the math environment is included by default. The template includes an example slide where this is shown.
+
 
 ## Copyright
 
