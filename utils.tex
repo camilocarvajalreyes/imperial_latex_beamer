@@ -1,3 +1,8 @@
+
+%-------------------------------------------------------------
+%	MATH THINGS
+%-------------------------------------------------------------
+
 % decent math font
 
 \usefonttheme[onlymath]{serif}
@@ -38,3 +43,38 @@
 % \newtheorem{algorithm}{Algorithm}[section]
 
 \def\beforeitemize{\leavevmode \vspace{-0.5\baselineskip}}
+
+
+%-------------------------------------------------------------
+%	REFERENCES UTILS
+%-------------------------------------------------------------
+
+% Remove rubbish from references
+
+% - The code to remove the "retrieved" date -
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldset=urldate, null]
+	  \step[fieldset=url, null]
+	  \step[fieldset=volume, null]
+	  \step[fieldset=pages, null]
+	  \step[fieldset=series, null]
+}}}
+\setbeamertemplate{bibliography item}
+
+
+% references slide
+\usepackage{xparse}
+
+\NewDocumentCommand{\ReferenceSlides}{o}{
+    \IfNoValueTF{#1}
+        {\begin{frame}}
+        {\begin{frame}[#1]}
+        \frametitle{References}
+        \setlength{\bibhang}{0pt}
+        \setlength{\labelnumberwidth}{0\textwidth}
+        \addtolength{\labelnumberwidth}{-\leftmargin}
+        \printbibliography
+    \end{frame}
+}

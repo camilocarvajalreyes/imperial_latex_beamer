@@ -62,6 +62,20 @@
 
 %----------------------------------------------------------------------------------------
 
+% references
+\usepackage[
+	style=alphabetic,
+	backend=biber,
+	style=apa,
+]{biblatex}
+% \usepackage{biblatex}
+\AtBeginBibliography{\scriptsize}  % smaller font for references
+\addbibresource{library.bib}
+\usepackage{scrextend}
+
+
+% more template improvements
+
 \input{utils}
 
 \begin{document}
@@ -212,6 +226,8 @@
 			Ab illate sitate explibus reiundusam, voluptur sim idebit, omnis dero quas adio quatur?
 
 			Pa cumquat ute nos exero magnime officatem. Luptia voluptatur aut acia comnist qui beatusam, omniatecae iur alit, cus debis
+
+            Example citation: \cite{ekman_universals_1971}.
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -522,6 +538,12 @@
 %----------------------------------------------------------------------------------------
 %	CLOSING SLIDES
 %----------------------------------------------------------------------------------------
+
+% References
+
+\ReferenceSlides
+% \ReferenceSlides[allowframebreaks]  % if citations don't fit in a single page
+
 
 % Blue closing slide
 
